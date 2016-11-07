@@ -9,7 +9,7 @@ import urllib2
 from datetime import date, datetime, timedelta
 from bs4 import BeautifulSoup
 
-ROOT = './'
+ROOT = '/home/dsp/git/pbob/'
 
 conn = sqlite3.connect(ROOT+'subscribe.db')
 c = conn.cursor()

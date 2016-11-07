@@ -9,7 +9,7 @@ from datetime import date, datetime
 import re
 import traceback
 
-ROOT = './'
+ROOT = '/home/dsp/git/pbob/'
 
 def sendMessage(id, msg):
     try:
