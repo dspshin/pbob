@@ -22,6 +22,7 @@ def help(id):
     sendMessage(id, """ SK planet 밥봇입니다.
 /sub   : 등록
 /unsub : 해제
+noti 시간은 대략 11시, 17시입니다. 전 아침은 안 먹거든요...
 """)
 
 def handle(msg):
