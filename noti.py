@@ -68,10 +68,9 @@ def crawl():
 	for user in users:
 		sendMessage( user, msg )
 
-	#delay
-	time.sleep(2)
+		#delay
+		time.sleep(1)
 
-today = date.today()
 now=datetime.now()
 
 TOKEN = sys.argv[1]
