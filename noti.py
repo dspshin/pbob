@@ -53,8 +53,11 @@ def crawl():
 			continue
 
 		msg += menuname+'\n'
-		msg += menu.material.string+'\n'
-		msg += menu.country.string+'\n\n'
+		materials = []
+		for material in menu.find_all('material'):
+			materials.append(material.string)
+		msg += ",".join(materials)+"\n\n"
+		#msg += menu.country.string+'\n\n'
 
 	#print msg
 
