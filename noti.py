@@ -36,6 +36,9 @@ def crawl():
 	soup = BeautifulSoup(contents, 'html.parser')
 	#print soup
 	#print soup.date.string, today
+	if soup.date.string != today:
+		return
+
 	msg=''
 
 	for menu in soup.find_all('menu'):
@@ -51,9 +54,9 @@ def crawl():
 
 		msg += menuname+'\n'
 		msg += menu.material.string+'\n'
-		msg += menu.country.string+'\n'
+		msg += menu.country.string+'\n\n'
 
-	print msg
+	#print msg
 
 	users = []
 	c.execute('SELECT user FROM subscribe') # get subscribing users
