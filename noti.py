@@ -74,6 +74,14 @@ def crawl():
 		#delay
 		time.sleep(1)
 
+	try:
+		from slacker import Slacker
+		slack = Slacker('xoxp-179889764723-179890624755-196697998211-55d5255a815c91929e07755d9503d423')
+		slack.chat.post_message('bot-platform-개발팀', 'test')
+	except:
+		traceback.print_exc(file=sys.stdout)
+
+
 now=datetime.now()
 
 TOKEN = sys.argv[1]
