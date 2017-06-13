@@ -77,7 +77,7 @@ def crawl():
 	try:
 		from slacker import Slacker
 		slack = Slacker( sys.argv[2] )
-		slack.chat.post_message('bot-platform-개발팀', msg)
+		slack.chat.post_message('#general', msg)
 	except:
 		traceback.print_exc(file=sys.stdout)
 
