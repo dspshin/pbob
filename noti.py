@@ -45,9 +45,9 @@ def crawl():
 		menuname = menu.menuname.string
 		isLunch = menuname.startswith(u"중식")
 		isDinner = menuname.startswith(u"석식")
-		if cur_hour == '17' and isDinner:
+		if (cur_hour=='17' or cur_hour=='16') and isDinner:
 			pass
-		elif cur_hour == '11' and isLunch:
+		elif (cur_hour=='11' or cur_hour=='10') and isLunch:
 			pass
 		else:
 			continue
@@ -77,7 +77,7 @@ def crawl():
 	try:
 		from slacker import Slacker
 		slack = Slacker( sys.argv[2] )
-		slack.chat.post_message('#general', msg)
+		slack.chat.post_message(channel='#general', text=msg, as_user=True)
 	except:
 		traceback.print_exc(file=sys.stdout)
 
